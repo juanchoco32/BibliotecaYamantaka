@@ -1,21 +1,7 @@
 package vista;
-import java.awt.Choice;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
-
+import java.awt.*;
+import javax.swing.*;
 
 public class PanelPrincipal extends JPanel{
 
@@ -25,9 +11,9 @@ public class PanelPrincipal extends JPanel{
 	private Choice Rol;
 	private JButton btnAceptar, btnCancelar;
 	private ImageIcon imagen;
-		
+
 	public PanelPrincipal(){
-		
+
 		lblRol = new JLabel("Rol: ");
 		Rol = new Choice();
 		lblUsuario = new JLabel("Usuario: ");
@@ -110,11 +96,11 @@ public class PanelPrincipal extends JPanel{
 //		gbc.anchor = GridBagConstraints.CENTER;
 		panelDatos.add(pssContrasena, gbc);
 
-		panelDatos.setBackground(null);	
+		panelDatos.setBackground(null);
 
 		JPanel panelimagen = new JPanel();
 		panelimagen.setLayout(new GridBagLayout());
-		
+
 		GridBagConstraints img = new GridBagConstraints();
 		img.gridx = 0;
 		img.gridy = 0;
@@ -126,12 +112,12 @@ public class PanelPrincipal extends JPanel{
 		img.fill = GridBagConstraints.NONE;
 		img.anchor = GridBagConstraints.CENTER;
 		panelimagen.add(image, img);
-		panelimagen.setBackground(null);	
+		panelimagen.setBackground(null);
 
 		//TIPOS DE LETRAS REUTILIZABLES
-		Font osb = new Font( "Open Sans",Font.BOLD,15); 
+		Font osb = new Font( "Open Sans",Font.BOLD,15);
 		Font os = new Font( "Open Sans",Font.PLAIN,14);
-		
+
 		lblRol.setForeground(new Color(127, 52, 45));
 		lblRol.setFont(os);
 		Rol.setFont(os);
@@ -141,7 +127,7 @@ public class PanelPrincipal extends JPanel{
 		Rol.add("Asesor Comercial");
 		Rol.add("Administrador");
 		Rol.add("Director General");
-		lblUsuario.setFont(os);	
+		lblUsuario.setFont(os);
 		lblUsuario.setForeground(new Color(127, 52, 45));
 		txtUsuario.setFont(os);
 		lblContrasena.setForeground(new Color(127, 52, 45));
@@ -156,7 +142,7 @@ public class PanelPrincipal extends JPanel{
 //		JPanel btnPanel = new JPanel();
 //		btnPanel.setLayout(new GridBagLayout());
 //		btnPanel.setBackground(null);
-//		
+//
 //		GridBagConstraints btn = new GridBagConstraints();
 //		btn.gridx = 0;
 //		btn.gridy = 0;
@@ -246,32 +232,36 @@ public class PanelPrincipal extends JPanel{
 	public String getRol() {
 		return Rol.getSelectedItem();
 	}
-	
+
 	public void setRol(Choice rol) {
 		Rol = rol;
 	}
-	
 
-	
+
+
 	//ACTION PERFORMED
 //	public void actionPerformed(ActionEvent evento){
-	
-	
+
+
 //						Empresa e = Empresa.getInstance();
-	
-	
-//		if  (evento.getSource() == btnAceptar && e.login(getRol(), getTxtUsuario(), getTxtContrase�a()) == true){
+
+
+//		if  (evento.getSource() == btnAceptar && e.login(getRol(), getTxtUsuario(), getTxtContraseña()) == true){
 //			VentanaAsesorComercial v1 = new VentanaAsesorComercial();
-//			
-//		}else if(evento.getSource() == btnAceptar && e.login(getRol(), getTxtUsuario(), getTxtContrase�a()) == true){
-//			
-//			
-//		} else if(evento.getSource() == btnAceptar && e.login(getRol(), getTxtUsuario(), getTxtContrase�a()) == false){
-//			JOptionPane.showMessageDialog(this, "Usuario y/o Contrase�a invalida");
+//
+//		}else if(evento.getSource() == btnAceptar && e.login(getRol(), getTxtUsuario(), getTxtContraseña()) == true){
+//
+//
+//		} else if(evento.getSource() == btnAceptar && e.login(getRol(), getTxtUsuario(), getTxtContraseña()) == false){
+//			JOptionPane.showMessageDialog(this, "Usuario y/o Contraseña invalida");
 //		}
 //		else if (evento.getSource() == btnCancelar)
 //			JOptionPane.showMessageDialog(this, "Oprimio el boton cancelar");
 //
 //	}
-
+}
+public class Main {
+	public static void(String[] args){
+		new PanelPrincipal();
+	}
 }
