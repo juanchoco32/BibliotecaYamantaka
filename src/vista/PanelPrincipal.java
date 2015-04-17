@@ -5,6 +5,10 @@ import javax.swing.*;
 
 public class PanelPrincipal extends JPanel{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JLabel lbli, lbln, lblRol, lblUsuario, lblContrasena, image;
 	private JTextField txtUsuario;
 	private JPasswordField pssContrasena;
@@ -260,8 +264,9 @@ public class PanelPrincipal extends JPanel{
 //
 //	}
 }
-public class Main {
+/*public class Main {
 	public static void(String[] args){
 		new PanelPrincipal();
 	}
 }
+*/
